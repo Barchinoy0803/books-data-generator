@@ -14,7 +14,7 @@ const NumberInput = ({ value, setValue, label }: NumberInputProps) => {
             label={label}
             type='number'
             value={value}
-            onChange={(e) => setValue(+e.target.value)}
+            onChange={(e) => setValue(+e.target.value >= 0 ? +e.target.value : 0)}
         />
     )
 }
