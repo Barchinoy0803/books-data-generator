@@ -10,7 +10,7 @@ interface SliderProps {
 }
 
 const LikeSlider = ({ value, setValue }: SliderProps) => {
-    const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    const handleSliderChange = (_: Event, newValue: number | number[]) => {
         setValue(typeof newValue === 'number' ? newValue : 0);
     };
 
