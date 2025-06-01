@@ -6,12 +6,11 @@ import { Book } from '../../types';
 import { generateFakeBook, getLocale } from '../../helpers';
 import { regionOptions } from '../../constants';
 import { Faker } from '@faker-js/faker';
-import { BooksTable } from '../../components/Table';
 import { IconButton, Tooltip } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import { CSVLink } from 'react-csv';
 import { useVisibleBooks } from '../../hooks';
-
+import BookTabs from '../../components/Tabs';
 
 const Home = () => {
     const [regionName, setRegionName] = useState<string>(regionOptions[0]);
@@ -90,7 +89,7 @@ const Home = () => {
                     </Tooltip>
                 </div>
                 <div className='container mx-auto'>
-                    <BooksTable data={books} />
+                    <BookTabs books={books}/>
                 </div>
             </div>
         </>

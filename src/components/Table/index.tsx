@@ -60,7 +60,7 @@ function Row({ row, index }: RowProps) {
                 <h1 className='text-[18px] font-sans font-bold'>Reviews</h1>
                 {
                   reviews.map(({ owner, content, date, rating }, inx) => (
-                    <div key={inx} className='w-[1070px] flex flex-col gap-1 p-1'>
+                    <div key={inx} className='w-[1180px] flex flex-col gap-1 p-2'>
                       <div className='flex flex-col gap-2'>
                         <p className='text-[20px] font-bold font-sans'>{owner}</p>
                         <Typography>{content}</Typography>

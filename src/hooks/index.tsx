@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useVisibleBooks = (bookIds: string[]) => {
     const [visibleSet, setVisibleSet] = useState<Set<string>>(new Set());
-    const rowRefs = useRef<Record<string, IntersectionObserverEntry>>({});
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
